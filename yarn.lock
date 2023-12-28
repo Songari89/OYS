@@ -2373,6 +2373,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@remix-run/router@npm:1.14.1":
+  version: 1.14.1
+  resolution: "@remix-run/router@npm:1.14.1"
+  checksum: a3a0e7bd1917a4fd10322269b78ce1c5917a74889dfa747305b5a56e5d441b9187e1d8aaa6d58c4bf77713e7baca825f87057a64b2d21718cdb361f1cda75687
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-babel@npm:^5.2.0":
   version: 5.3.1
   resolution: "@rollup/plugin-babel@npm:5.3.1"
@@ -2610,6 +2617,24 @@ __metadata:
     "@svgr/plugin-svgo": ^5.5.0
     loader-utils: ^2.0.0
   checksum: 540391bd63791625d26d6b5e0dd3c716ef51176bfba53bf0979a1ac4781afd2672f4bef2d76cf3d9cdc8e9ee61bda6863ed405a237b10406633ede4cd524f1cc
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-core@npm:5.14.2":
+  version: 5.14.2
+  resolution: "@tanstack/query-core@npm:5.14.2"
+  checksum: 978427a0bde5ed7ba9eacb7b15f2c384b049b7b90b10d9fe28d7bd4130fbf92980fa9907ccfeb90ebca8f385ad7760c359095af9b65b1ae6431aac01b4f42939
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.15.0":
+  version: 5.15.0
+  resolution: "@tanstack/react-query@npm:5.15.0"
+  dependencies:
+    "@tanstack/query-core": 5.14.2
+  peerDependencies:
+    react: ^18.0.0
+  checksum: 9dbe763a6109ebcf91178cc8b4f4172cf207c1ae3009f2e35b7c496447c3ba654cb190d974d0dc340d29cc7e50ad749a1b521c1de40245eb2bfafecfe2e106c3
   languageName: node
   linkType: hard
 
@@ -6042,7 +6067,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.3.0":
+"eslint@npm:^8.3.0, eslint@npm:^8.56.0":
   version: 8.56.0
   resolution: "eslint@npm:8.56.0"
   dependencies:
@@ -9585,12 +9610,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oys@workspace:."
   dependencies:
+    "@tanstack/react-query": ^5.15.0
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
+    eslint: ^8.56.0
+    eslint-config-react-app: ^7.0.1
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-router-dom: ^6.21.1
     react-scripts: 5.0.1
+    uuid: ^9.0.1
     web-vitals: ^2.1.0
   languageName: unknown
   linkType: soft
@@ -10981,6 +11011,30 @@ __metadata:
   version: 0.11.0
   resolution: "react-refresh@npm:0.11.0"
   checksum: 112178a05b1e0ffeaf5d9fb4e56b4410a34a73adeb04dbf13abdc50d9ac9df2ada83e81485156cca0b3fa296aa3612751b3d6cd13be4464642a43679b819cbc7
+  languageName: node
+  linkType: hard
+
+"react-router-dom@npm:^6.21.1":
+  version: 6.21.1
+  resolution: "react-router-dom@npm:6.21.1"
+  dependencies:
+    "@remix-run/router": 1.14.1
+    react-router: 6.21.1
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: d8ea3370babab626827008ced8a776ac991023745dc69d44332b6a5229dd2a6899f3e46fc50365cef0c7487cf726bcdccb365ec106915f92c735da6e4c2e6b97
+  languageName: node
+  linkType: hard
+
+"react-router@npm:6.21.1":
+  version: 6.21.1
+  resolution: "react-router@npm:6.21.1"
+  dependencies:
+    "@remix-run/router": 1.14.1
+  peerDependencies:
+    react: ">=16.8"
+  checksum: c6774cf4440b524401cecb40f4fbf4dbc89d61405f9f6d3cb3d2338e262a5254b9e27bc6039dc32e2c5f8b3009e83e9d6b30a61159dd6c423297cb0e3bd46fb3
   languageName: node
   linkType: hard
 
@@ -12908,6 +12962,15 @@ __metadata:
   bin:
     uuid: dist/bin/uuid
   checksum: 5575a8a75c13120e2f10e6ddc801b2c7ed7d8f3c8ac22c7ed0c7b2ba6383ec0abda88c905085d630e251719e0777045ae3236f04c812184b7c765f63a70e58df
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "uuid@npm:9.0.1"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 39931f6da74e307f51c0fb463dc2462807531dc80760a9bff1e35af4316131b4fc3203d16da60ae33f07fdca5b56f3f1dd662da0c99fea9aaeab2004780cc5f4
   languageName: node
   linkType: hard
 
