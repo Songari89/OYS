@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nanum+Gothic:wght@400;700&display=swap');
+
+:root{
+  /* 색상 차트 */
+  --bgColor: #FAF6ED;
+  --brandColor: #681111;
+  --subBrandColor: #D48325;
+  --fontColor: #2E2E2E;
+  --subFontColor: #464646;
+}
+
+/* 폰트 설정 */
+@font-face{
+  font-family:'Lato', sans-serif;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039
+}
+
+@font-face{
+  font-family:'Nanum Gothic', sans-serif;
+  unicode-range:  U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E
+}
