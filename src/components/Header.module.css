@@ -1,4 +1,51 @@
-.gothic{
-  font-size: 3rem;
-  color: var(--fontColor)
+.container{
+  margin: 1rem auto;
+  width: 95vw;
+  height: 4rem;
+  padding:0;
+}
+
+.logo{
+  width:100%;
+  border-bottom: 2px solid var(--brandColor);
+  margin:0;
+}
+
+.logoimage {
+  width: 6rem;
+}
+
+.link {
+  text-align:center;
+}
+
+.link>img{
+  display:none;
+}
+
+.activeLink>img {
+  display: block;
+}
+
+
+.menu {
+  display: flex;
+  justify-content: end;
+  width:100%;
+}
+
+.menu> a > p {
+  margin: 0 0.5rem;
+  color: var(--fontColor);
+}
+
+@media(max-width:350px){
+  .container{
+    width:100%;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+  .logoimage{
+    margin: 0 0.8rem;
+  }
 }

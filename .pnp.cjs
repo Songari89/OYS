@@ -36,8 +36,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-react-app", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:7.0.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:18.2.0"],\
+            ["react-intersection-observer", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:9.5.3"],\
             ["react-router-dom", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:6.21.1"],\
             ["react-scripts", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:5.0.1"],\
+            ["swiper", "npm:11.0.5"],\
             ["uuid", "npm:9.0.1"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
@@ -12862,8 +12864,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-react-app", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:7.0.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:18.2.0"],\
+            ["react-intersection-observer", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:9.5.3"],\
             ["react-router-dom", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:6.21.1"],\
             ["react-scripts", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:5.0.1"],\
+            ["swiper", "npm:11.0.5"],\
             ["uuid", "npm:9.0.1"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
@@ -15181,6 +15185,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-intersection-observer", [\
+        ["npm:9.5.3", {\
+          "packageLocation": "./.yarn/cache/react-intersection-observer-npm-9.5.3-5bc82a81dc-2281912a9f.zip/node_modules/react-intersection-observer/",\
+          "packageDependencies": [\
+            ["react-intersection-observer", "npm:9.5.3"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:9.5.3", {\
+          "packageLocation": "./.yarn/__virtual__/react-intersection-observer-virtual-a5840e31c0/0/cache/react-intersection-observer-npm-9.5.3-5bc82a81dc-2281912a9f.zip/node_modules/react-intersection-observer/",\
+          "packageDependencies": [\
+            ["react-intersection-observer", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:9.5.3"],\
+            ["@types/react", null],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-is", [\
         ["npm:16.13.1", {\
           "packageLocation": "./.yarn/cache/react-is-npm-16.13.1-a9b9382b4f-f7a19ac349.zip/node_modules/react-is/",\
@@ -16730,6 +16756,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["csso", "npm:4.2.0"],\
             ["picocolors", "npm:1.0.0"],\
             ["stable", "npm:0.1.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["swiper", [\
+        ["npm:11.0.5", {\
+          "packageLocation": "./.yarn/cache/swiper-npm-11.0.5-152220df64-83b125d167.zip/node_modules/swiper/",\
+          "packageDependencies": [\
+            ["swiper", "npm:11.0.5"]\
           ],\
           "linkType": "HARD"\
         }]\

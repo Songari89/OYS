@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  height: calc(98vw / 3);
+}
+
+.bannercontainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  background-color: #ffffff;
+}
+
+
+.lookbook1 {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  left: 120%;
+  animation: moveleft 1s linear forwards;
+}
+
+.lookbook2 {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  right: 120%;
+  animation: moveright 1s linear forwards;
+}
+
+.text{
+  width: 100%;
+  text-align: center;
+  position:absolute;
+  top: 10%;
+  animation: moveup 1s linear forwards;
+}
+
+@keyframes moveleft {
+  to {
+    left: 0;
+  }
+}
+
+@keyframes moveright {
+  to {
+    right: 0;
+  }
+}
+
+@keyframes moveup {
+  from {
+    top: 100%;
+  }
+}

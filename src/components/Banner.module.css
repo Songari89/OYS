@@ -1,0 +1,33 @@
+.bannercontainer {
+  width: 95vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.banner {
+  width:100%;
+  position:absolute;
+  border-radius:0.5rem;
+  animation: fade ease-in-out 8s infinite;
+  opacity: 0;
+}
+.banner1{
+  animation-delay:0s;
+}
+
+.banner2{
+  animation-delay:4s;
+}
+
+@keyframes fade {
+0% {
+  opacity:0;
+}
+50% {
+  opacity: 1;
+}
+100% {
+  opacity: 0;
+}
+}
+
