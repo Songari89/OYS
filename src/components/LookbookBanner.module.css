@@ -7,17 +7,17 @@
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
   position: relative;
   background-color: #ffffff;
 }
-
 
 .lookbook1 {
   width: auto;
   height: 100%;
   position: absolute;
   left: 120%;
-  animation: moveleft 1s linear forwards;
+  animation: moveleft var(--banneranimation);
 }
 
 .lookbook2 {
@@ -25,15 +25,29 @@
   height: 100%;
   position: absolute;
   right: 120%;
-  animation: moveright 1s linear forwards;
+  animation: moveright var(--banneranimation);
 }
 
-.text{
+.text {
+  width: 48%;
+  position: absolute;
+  top: 15%;
+  animation: moveup var(--banneranimation);
+  text-align: right;
+  z-index: 1;
+}
+
+.text > img {
   width: 100%;
-  text-align: center;
-  position:absolute;
-  top: 10%;
-  animation: moveup 1s linear forwards;
+}
+
+.text > button {
+  margin: 3.5%;
+}
+
+.text > button:hover {
+  background-color: #8f1111;
+  font-weight: 700;
 }
 
 @keyframes moveleft {
@@ -51,5 +65,27 @@
 @keyframes moveup {
   from {
     top: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .text {
+    top: 10%;
+  }
+  .text > button {
+    margin: 1.2rem;
+    width: 6.5rem;
+    height: 2.2rem;
+    border-radius: 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .text {
+    text-align: center;
+  }
+  .text > button {
+    margin: 3.5% 0;
   }
 }

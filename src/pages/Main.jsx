@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Main.module.css";
-import LookbookBanner from "../components/LookbookBanner";
+import ScrollBanner from "../components/ScrollBanner";
 
 export default function Main() {
   return (
@@ -20,7 +20,13 @@ export default function Main() {
         </div>
       </div>
       <div className={styles.flexbox}>
-        <LookbookBanner />
+        <ScrollBanner type={"seasonoffbanner"} />
+      </div>
+      <div className={styles.flexbox}>
+        <ScrollBanner type={"lookbookbanner"} />
+      </div>
+      <div className={styles.flexbox}>
+        <ScrollBanner type={"offlinebanner"} />
       </div>
     </section>
   );

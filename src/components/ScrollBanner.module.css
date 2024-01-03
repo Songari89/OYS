@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  height: calc(98vw / 3);
+}
+
+.bannercontainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #ffffff;
+}
+
+@media (min-width: 1440px) {
+  .bannercontainer{
+    width: 1370px;
+    height: 455px;
+  }
+}

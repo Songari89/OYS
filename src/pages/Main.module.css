@@ -7,7 +7,7 @@
 .flexbox{
   width: 92vw;
   height: calc(98vw/3);
-  margin: 2% 0 7% 0;
+  margin: 2% 0 8% 0;
   border-radius: 0.5rem;
   position: relative;
   overflow: hidden;
@@ -58,7 +58,7 @@
 
 
 @media (min-width: 1440px) {
-  .bannercontainer {
+  .flexbox{
     width: 1370px;
     height: 455px;
   }

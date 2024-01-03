@@ -1,0 +1,49 @@
+.soimage{
+  width: auto;
+  height: 100%;
+  position:absolute;
+  right:0;
+  display:flex;
+  animation: moveright var(--banneranimation);
+}
+
+.textcontainer{
+  width:50%;
+  z-index: 1;
+  position: absolute;
+  left: 3%;
+  animation: moveleft var(--banneranimation);
+  text-align: center;
+  /* top:50%;
+  transform: translateY(-50%); */
+}
+
+.textcontainer>button {
+  margin: 3% 0 0 0;
+  opacity: 0;
+  animation: showbtn 1s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.sotext {
+  width: 100%;
+}
+
+
+@keyframes moveright {
+  from {
+    right: 100%;
+  }
+}
+
+@keyframes moveleft {
+  from {
+    left: 100%;
+  }
+}
+
+@keyframes showbtn {
+  to {
+    opacity: 1;
+  }
+}
