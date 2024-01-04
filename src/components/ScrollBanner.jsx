@@ -1,9 +1,9 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "./ScrollBanner.module.css";
-import SeasonoffBanner from "./SeasonoffBanner";
-import LookbookBanner from "./LookbookBanner";
-import OffLineBanner from "./OffLineBanner";
+import SeasonoffBanner from "./banners/SeasonoffBanner";
+import LookbookBanner from "./banners/LookbookBanner";
+import OffLineBanner from "./banners/OffLineBanner";
 
 const components = {
   seasonoffbanner: SeasonoffBanner,

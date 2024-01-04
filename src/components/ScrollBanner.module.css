@@ -11,10 +11,13 @@
   align-items: center;
   position: relative;
   background-color: #ffffff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 1px 3px 6px 1px rgba(110, 110, 110, 0.5);
 }
 
 @media (min-width: 1440px) {
-  .bannercontainer{
+  .bannercontainer {
     width: 1370px;
     height: 455px;
   }

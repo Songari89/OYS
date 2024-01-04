@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  background-color: var(--brandColor);
+  color: #ececec;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  font-size: 0.9rem;
+}
+
+.companyinfo {
+  width: 30%;
+}
+.companyinfo > p {
+  margin: 0.2rem 0;
+}
+
+.copyright {
+  font-size: 0.8rem;
+}
+
+.sitemap {
+  width: 65%;
+  margin: 0 0 0 1rem;
+}
