@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@firebase/app", "npm:0.9.25"],\
             ["@tanstack/react-query", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:5.15.0"],\
             ["@testing-library/jest-dom", "npm:5.17.0"],\
             ["@testing-library/react", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:13.4.0"],\
@@ -14088,6 +14089,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["oys", "workspace:."],\
+            ["@firebase/app", "npm:0.9.25"],\
             ["@tanstack/react-query", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:5.15.0"],\
             ["@testing-library/jest-dom", "npm:5.17.0"],\
             ["@testing-library/react", "virtual:1eb54b86400b8eb92dbf7ff69d47c4907406d989ac5b116f14aedee1f3b4ecef69d56b47f42bcfda4be9d481fbc4fdc51435f81b3b95fbb381874206c2d07130#npm:13.4.0"],\

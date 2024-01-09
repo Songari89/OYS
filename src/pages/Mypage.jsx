@@ -1,6 +1,10 @@
 import React from "react";
 import styles from "./Mypage.module.css";
+import useUserContext from "../context/UserProvider";
+import Loading from "./Loading";
 
 export default function Mypage() {
-  return <div>Mypage</div>;
+  const { logout } = useUserContext();
+
+  return <></>;
 }

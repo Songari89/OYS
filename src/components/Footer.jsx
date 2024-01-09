@@ -4,7 +4,7 @@ import Sitemap from "./Sitemap";
 
 export default function Footer() {
   return (
-    <footer className={styles.container}>
+    <div className={styles.container}>
       <div className={styles.companyinfo}>
         <img src="image/logo2.svg" alt="logo" />
         <p>04796 서울시 성동구 성수이로 26길 27</p>
@@ -15,6 +15,6 @@ export default function Footer() {
       <div className={styles.sitemap}>
         <Sitemap />
       </div>
-    </footer>
+    </div>
   );
 }

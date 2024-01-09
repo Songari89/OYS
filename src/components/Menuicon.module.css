@@ -1,0 +1,37 @@
+.icons {
+  width: 333.69px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  margin: 0;
+}
+
+.icons > img {
+  width: 20px;
+  height: 20px;
+}
+.defaultclassname {
+  display: none;
+}
+
+.products {
+  position: absolute;
+  left: 40.55px;
+}
+
+.aboutus {
+  position: absolute;
+  left: 138.28px;
+}
+
+.cart {
+  position: absolute;
+  left: 214.06px;
+}
+
+@media(max-width:450px){
+  .icons{
+    display:none;
+  }
+}

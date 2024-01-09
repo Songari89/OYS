@@ -6,7 +6,7 @@ export default function Sitemap() {
   return (
     <ul className={styles.listcontainer}>
       <li>
-        <h7>Store Info</h7>
+        <p className={styles.title}>Store Info</p>
         <ul className={styles.storeinfo}>
           <li>
             <Link to="/">회사소개</Link>
@@ -23,7 +23,7 @@ export default function Sitemap() {
         </ul>
       </li>
       <li>
-        <h7>Contact Us</h7>
+        <p className={styles.title}>Contact Us</p>
         <div className={styles.contactus}>
           <p>월 - 금 10:00 - 5:30</p>
           <p>토 - 일 휴무</p>
@@ -34,12 +34,12 @@ export default function Sitemap() {
       </li>
       <li>
         <Link to="/">
-          <h7>Products</h7>
+          <p className={styles.title}>Products</p>
         </Link>
       </li>
       <li>
         <Link to="/">
-          <h7>Warranty</h7>
+          <p className={styles.title}>Warranty</p>
         </Link>
       </li>
     </ul>

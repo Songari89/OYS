@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Main.module.css";
 import ScrollBanner from "../components/ScrollBanner";
-import Footer from "../components/Footer";
 
 export default function Main() {
   return (
@@ -29,7 +28,6 @@ export default function Main() {
       <div className={styles.flexbox}>
         <ScrollBanner type={"offlinebanner"} />
       </div>
-      <Footer/>
     </section>
   );
 }

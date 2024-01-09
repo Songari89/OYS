@@ -1,0 +1,32 @@
+
+.icons{
+  width: 333.69px;
+  height:20px;
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  margin: 0;
+}
+
+.icons>img {
+  width:20px;
+  height:20px;
+}
+.mypageicon {
+  position:absolute;
+  left: 283.17px;
+}
+
+.addproduct{
+  position: absolute;
+  right: 0;
+}
+
+.menu{
+  position: absolute;
+  left:0;
+}
+
+.move{
+  left: 50px;
+}

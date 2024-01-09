@@ -6,16 +6,13 @@
 
 }
 
-.auth {
-  width:100vw;
-  height: 2rem;
-  background-color: var(--subBrandColor);
-}
-
 .logo{
   width:100%;
   border-bottom: 2px solid var(--brandColor);
   margin:0;
+  display: flex;
+  position: relative;
+
 }
 
 .logoimage {
@@ -37,7 +34,7 @@
 
 .menu {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   width:100%;
 }
 

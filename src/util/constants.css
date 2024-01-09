@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nanum+Gothic:wght@400;700&display=swap');
 
 :root{
+
   /* 색상 차트 */
   --bgColor: #FAF6ED;
   --brandColor: #681111;
@@ -10,6 +11,9 @@
 
   /* 애니메이션 설정 */
   --banneranimation: 2s ease forwards;
+
+  /* 보더 설정 */
+  --defaultradius: 0.5rem;
 }
 
 a{

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import "../src/util/constants.css";
+import "../src/util/Constants.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -12,6 +12,7 @@ import Management from "./pages/Management";
 import Mypage from "./pages/Mypage";
 import ProductsByCategory from "./pages/ProductsByCategory";
 import Cart from "./pages/Cart";
+import ProtectedRoute from "./pages/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -23,8 +24,22 @@ const router = createBrowserRouter([
       { path: "/:category", element: <ProductsByCategory /> },
       { path: "/:category/:id", element: <ProductDetail /> },
       { path: "/cart", element: <Cart /> },
-      { path: "/management", element: <Management /> },
-      { path: "/mypage", element: <Mypage /> },
+      {
+        path: "/management",
+        element: (
+          <ProtectedRoute requireAdmin>
+            <Management />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/mypage",
+        element: (
+          <ProtectedRoute>
+            <Mypage />{" "}
+          </ProtectedRoute>
+        ),
+      },
     ],
   },
 ]);

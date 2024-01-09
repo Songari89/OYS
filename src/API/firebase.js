@@ -1,5 +1,14 @@
 import { initializeApp } from "firebase/app";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  getAuth,
+  signInWithPopup,
+  signOut,
+  onAuthStateChanged,
+  setPersistence,
+  browserSessionPersistence,
+} from "firebase/auth";
+import { getDatabase, get, set, ref } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -9,24 +18,60 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
-const auth = getAuth();
+const database = getDatabase(app);
 
+// export async function login() {
+//       return signInWithPopup(auth, provider)
+//         .then((result) => {
+//           const user = result.user;
 
-export function login() {
-  signInWithPopup(auth, provider)
-  .then((result) => {
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    const user = result.user;
-    console.log(user)
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    const email = error.customData.email;
-    const credential = GoogleAuthProvider.credentialFromError(error);
-  });
+//           return user;
+//         })
+//         .catch((error) => {
+//           alert("로그인을 다시 시도해주세요.");
+//         });
+//     }
 
+export async function login() {
+  setPersistence(auth, browserSessionPersistence)
+    .then(() => {
+      return signInWithPopup(auth, provider)
+        .then((result) => {
+          const user = result.user;
+          return user;
+        })
+        .catch((error) => {
+          alert("로그인을 다시 시도해주세요.");
+        });
+    })
+    .catch(console.error);
 }
 
+export async function logout() {
+  return signOut(auth)
+    .then(() => null)
+    .catch((error) => {
+      alert("로그아웃을 다시 시도해주세요.");
+    });
+}
+
+export function onUserStateChange(callback) {
+  onAuthStateChanged(auth, async (user) => {
+    const updatedUser = user ? await adminUser(user) : user;
+    callback(updatedUser);
+  });
+}
+
+async function adminUser(user) {
+  return get(ref(database, "admins")).then((snapshot) => {
+    if (snapshot.exists()) {
+      const adimins = snapshot.val();
+      const isAdmin = adimins.includes(user.uid);
+      return { ...user, isAdmin };
+    }
+    return user;
+  });
+}

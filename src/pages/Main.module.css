@@ -21,7 +21,7 @@
 .banner {
   width: 100%;
   position: absolute;
-  border-radius: 0.5rem;
+  border-radius: var(--defaultradius);
   box-shadow: 1px 3px 6px 1px rgba(0,0,0,0.5);
   animation: fade ease-in-out 6.5s infinite;
   opacity: 1;

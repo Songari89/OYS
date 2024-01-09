@@ -1977,7 +1977,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@firebase/app@npm:0.9.25":
+"@firebase/app@npm:0.9.25, @firebase/app@npm:^0.9.25":
   version: 0.9.25
   resolution: "@firebase/app@npm:0.9.25"
   dependencies:
@@ -10301,6 +10301,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oys@workspace:."
   dependencies:
+    "@firebase/app": ^0.9.25
     "@tanstack/react-query": ^5.15.0
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
