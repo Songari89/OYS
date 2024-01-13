@@ -20,13 +20,5 @@
 .addproduct{
   position: absolute;
   right: 0;
-}
-
-.menu{
-  position: absolute;
-  left:0;
-}
-
-.move{
-  left: 50px;
+  cursor: pointer;
 }

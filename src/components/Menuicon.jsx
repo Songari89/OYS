@@ -5,7 +5,12 @@ import styles from "./Menuicon.module.css";
 export default function Menuicon() {
   const location = useLocation();
   const path = location.state?.path || null;
-  const menuclassname = styles[path] || styles.defaultclassname;
+  let menuclassname;
+  if (location.pathname.includes("/products")) {
+    menuclassname = styles["products"];
+  } else {
+    menuclassname = styles[path] || styles.defaultclassname;
+  }
 
   return (
     <div className={styles.icons}>

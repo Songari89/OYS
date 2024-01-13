@@ -10,7 +10,7 @@ export function UserProvider({ children }) {
   useEffect(() => {
     onUserStateChange((user) => {
       setUser(user);
-      // setLoading(false)
+      setLoading(false)
     });
   }, []);
 

@@ -28,7 +28,7 @@ ul{
 }
 
 /* 폰트 설정 */
-h1, h2,h7, p{
+h1, h2, h4, h5, h6, p{
   padding: 0;
   margin:0;
 }
@@ -38,10 +38,19 @@ h1{
 h2{
   font-size: 4rem;
 }
-h7{
-  font-weight: 600;
+
+h4{
+  font-size: 1.5rem;
+} 
+
+h5{
+  font-size: 1.3rem;
+}
+
+h6{
   font-size: 1.1rem;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

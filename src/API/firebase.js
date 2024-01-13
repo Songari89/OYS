@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { v4 as uuid } from "uuid";
 import {
   GoogleAuthProvider,
   getAuth,
@@ -73,5 +74,17 @@ async function adminUser(user) {
       return { ...user, isAdmin };
     }
     return user;
+  });
+}
+
+export async function addNewProduct(product, imageUrl) {
+  const id = uuid();
+  const category = product.category;
+  set(ref(database, `products/${category}/${id}`), {
+    ...product,
+    id,
+    price: parseInt(product.price).toLocaleString("ko-KR"),
+    image: imageUrl,
+    colors: product.colors.split(","),
   });
 }

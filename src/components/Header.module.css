@@ -1,9 +1,9 @@
 .container{
-  margin: 1.5rem auto;
-  width: 95vw;
+  margin: 1.5rem auto 2rem auto;
+  width: 90vw;
   height: 4rem;
   padding:0;
-
+  position: relative;
 }
 
 .logo{
@@ -36,12 +36,24 @@
   display: flex;
   justify-content: flex-end;
   width:100%;
+
 }
 
-.menu> a > p {
+
+
+
+
+.menu> a {
   margin: 0 0.5rem;
   color: var(--fontColor);
 }
+
+.products {
+  margin: 0 0.5rem;
+  color: var(--fontColor);
+
+} 
+
 
 @media(max-width:350px){
   .container{

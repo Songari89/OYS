@@ -17,17 +17,17 @@
 
 .products {
   position: absolute;
-  left: 40.55px;
+  right: 273.74px;
 }
 
 .aboutus {
   position: absolute;
-  left: 138.28px;
+  right: 175.41px;
 }
 
 .cart {
   position: absolute;
-  left: 214.06px;
+  right: 99.64px;
 }
 
 @media(max-width:450px){

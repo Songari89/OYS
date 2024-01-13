@@ -1,0 +1,47 @@
+.container {
+  width: 90vw;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+.fileimage {
+  width: 25rem;
+  margin: 1rem 0;
+}
+
+.form > input {
+  width: 100%;
+  padding: 1.3%;
+  border: none;
+  margin: 0.4rem 0;
+  border-radius: var(--defaultradius);
+  font-size: 0.9rem;
+}
+
+.success {
+  font-size: 0.9rem;
+}
+
+.btn {
+  width: 90vw;
+  padding: 0.7rem;
+  margin: 1rem 0;
+  background-color: var(--brandColor);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+}
+
+.uploading {
+  color: #bbbbbb;
+}
+
+@media (min-width: 1440px) {
+  .form > input {
+    padding: 1rem;
+  }
+}
