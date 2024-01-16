@@ -10,17 +10,18 @@ export default function SubMenu({ path }) {
     if (pathname.includes(path)) {
       setShow(true);
     }
-    if (!pathname.includes(path)) {
+    if (!pathname.includes(path) ) {
       setShow(false);
     }
-  }, [pathname]);
+  }, [pathname, path]);
 
   return (
     <>
       {show && (
         <div className={styles.submenu}>
+          <Link to="/products">ALL</Link>
           <Link to="/products/crossbag">CROSS BAG</Link>
-          <Link to="/products/totebag">TOTOE BAG</Link>
+          <Link to="/products/totebag">TOTE BAG</Link>
           <Link to="/products/ecobag">ECO BAG</Link>
         </div>
       )}

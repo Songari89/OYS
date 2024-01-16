@@ -6,7 +6,7 @@ import { addNewProduct } from "../API/firebase";
 export default function Management() {
   const [product, setProduct] = useState({})
   const [file, setFile]  = useState();
-  const [success, setSuccess] = useState('✅ 상품이 등록되었습니다.');
+  const [success, setSuccess] = useState('');
   const [uploading, setUploading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +18,7 @@ export default function Management() {
       setSuccess(null)
       setProduct({})
       setFile(null)
-    }, 4000)
+    }, 3000)
     })
     .finally(() => setUploading(false))
   }
@@ -33,7 +33,13 @@ export default function Management() {
   return (
     <div className={styles.container}>
       <h6>새 상품 등록</h6>
-      {file && <img className={styles.fileimage} src={URL.createObjectURL(file)} alt="file image"/>}
+      {file && (
+        <img
+          className={styles.fileimage}
+          src={URL.createObjectURL(file)}
+          alt="file image"
+        />
+      )}
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type="file"
@@ -55,6 +61,14 @@ export default function Management() {
           placeholder="가격"
           name="price"
           value={product.price ?? ""}
+          required
+          onChange={handleChange}
+        />
+        <input
+          type="number"
+          placeholder="할인가격"
+          name="saleprice"
+          value={product.saleprice ?? ""}
           required
           onChange={handleChange}
         />
@@ -83,7 +97,12 @@ export default function Management() {
           onChange={handleChange}
         />
         <p className={styles.success}>{success}</p>
-        <button disabled={uploading} className={`${styles.btn} ${uploading? styles.uploading :''}`}>{uploading? '업로드 중...' : '제품 등록하기'}</button>
+        <button
+          disabled={uploading}
+          className={`submitbtn ${uploading ? styles.uploading : ""}`}
+        >
+          {uploading ? "업로드 중..." : "제품 등록하기"}
+        </button>
       </form>
     </div>
   );

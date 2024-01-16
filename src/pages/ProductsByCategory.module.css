@@ -1,0 +1,14 @@
+
+.contentcontainer {
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 2px solid var(--brandColor);
+  padding: 2.5rem 2rem;
+}
+
+.lists{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  place-items: center;
+  gap: 1.5rem;
+}

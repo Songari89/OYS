@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Main.module.css";
-import ScrollBanner from "../components/ScrollBanner";
+import ScrollBanner from "../components/banners/ScrollBanner";
 
 export default function Main() {
   return (

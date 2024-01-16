@@ -21,9 +21,10 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Main /> },
-      { path: "/products", element: <Main /> },
+      { path: "/products", element: <ProductsByCategory /> },
       { path: "/products/:category", element: <ProductsByCategory /> },
       { path: "/products/:category/:id", element: <ProductDetail /> },
+      { path: "/aboutus", element: <NotFound /> },
       { path: "/cart", element: <Cart /> },
       {
         path: "/management",
@@ -49,7 +50,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
-    
   </React.StrictMode>
 );
 

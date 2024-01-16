@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "./Login.module.css";
-import useUserContext from "../context/UserProvider";
-import {useNavigate} from 'react-router-dom'
+import useUserContext from "../../context/UserProvider";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const { user, admin } = useUserContext();
   const navigate = useNavigate();
-  const handleClick = () => {navigate('/management')}
+  const handleClick = () => {
+    navigate("/management");
+  };
 
   return (
     <>

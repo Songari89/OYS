@@ -104,3 +104,35 @@ code {
   color: var(--fontColor);
   font-weight: 600;
 }
+
+/* 데이터 제출 버튼 */
+.submitbtn {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 1rem 0;
+  background-color: var(--brandColor);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+}
+
+/* section 공통 스타일 */
+.section{
+    width: 90vw;
+  margin: 0 auto;
+  text-align:center;
+  padding: 1rem 0 8rem 0;
+}
+
+.sectiontitle{
+    font-size:0.9rem;
+  margin: 0 0 0.1rem 0;
+  font-weight: 600;
+}
+
+@media(max-width:450px){
+  .section{
+    width: 100%;
+    padding: 1rem 0 5rem 0;
+  }
+}

@@ -1,0 +1,46 @@
+.list{
+  background-color: #ffffff;
+  border-radius: var(--defaultradius);
+  overflow: hidden;
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
+    transition : transform 0.1s ease-in-out;
+}
+
+.list:hover{
+  transform: scale(1.03);
+}
+
+.image{
+  width: 100%;
+}
+
+.contentcontainer {
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--fontColor);
+}
+
+.contents {
+  text-align: left;
+}
+
+.title{
+  font-weight: 600;
+}
+
+.price{
+  font-size: 0.9rem;
+}
+
+.sale{
+  color: var(--subFontColor);
+  font-size: 0.7rem;
+  text-decoration: line-through;
+}
+
+.color{
+  color: var(--subFontColor);
+  font-size: 0.8rem;
+}

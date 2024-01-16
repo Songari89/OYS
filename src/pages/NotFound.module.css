@@ -8,18 +8,29 @@
 
 .contentscontainer {
   width: 93vw;
-  height: 50vh;
+  height: 70vh;
   border-radius: var(--defaultradius);
   background-color: #ffffff;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items:center;
+  flex-direction:column;
 }
 
-.contentscontainer> img {
+.text {
+display: flex;
+  justify-content: center;
+  align-items:center;
+  margin: 0 0 1rem 0;
+}
+
+.text> img {
   width: 1.6rem;
   margin: 0 0.4rem 0 0;
 }
-.contentscontainer>p{
+.text>p{
   font-size: 1.1rem;
+}
+.contentscontainer>button {
+  display: block;
 }

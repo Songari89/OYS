@@ -33,7 +33,7 @@ export default function Sitemap() {
         </div>
       </li>
       <li>
-        <Link to="/">
+        <Link to="/products">
           <p className={styles.title}>Products</p>
         </Link>
       </li>

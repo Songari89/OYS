@@ -1,16 +1,10 @@
 .submenu {
   position: absolute;
-  right: 147px;
+  right: 113px;
   margin: 0.5rem 0;
   display: flex;
-  /* animation: dropdown ease-in-out 0.5s forwards; */
 }
 
-@keyframes dropdown{
-  from{
-    top: 20px;
-  }
-}
 
 .submenu > a {
   margin: 0 0.5rem;

@@ -84,7 +84,34 @@ export async function addNewProduct(product, imageUrl) {
     ...product,
     id,
     price: parseInt(product.price).toLocaleString("ko-KR"),
+    saleprice: parseInt(product.saleprice).toLocaleString("ko-KR"),
     image: imageUrl,
     colors: product.colors.split(","),
+  });
+}
+
+// export async function getProduct(category) {
+//   return get(ref(database, `products/${category}`)).then((snapshot) => {
+//     if (snapshot.exists()) {
+//       return Object.values(snapshot.val());
+//     }
+//     return [];
+//   });
+// }
+
+export async function getProduct(category) {
+  const databaseRef = category ? `products/${category}` : "products";
+  return get(ref(database, databaseRef)).then((snapshot) => {
+    if (snapshot.exists()) {
+
+      if (category) {
+        return Object.values(snapshot.val());
+      } else {
+        return Object.values(snapshot.val()).flatMap((categoryData) =>
+          Object.values(categoryData)
+        );
+      }
+    }
+    return [];
   });
 }

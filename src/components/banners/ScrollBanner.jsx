@@ -1,9 +1,9 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "./ScrollBanner.module.css";
-import SeasonoffBanner from "./banners/SeasonoffBanner";
-import LookbookBanner from "./banners/LookbookBanner";
-import OffLineBanner from "./banners/OffLineBanner";
+import SeasonoffBanner from "./SeasonoffBanner";
+import LookbookBanner from "./LookbookBanner";
+import OffLineBanner from "./OffLineBanner";
 
 const components = {
   seasonoffbanner: SeasonoffBanner,
@@ -22,7 +22,7 @@ export default function ScrollBanner({ type }) {
     <div ref={ref} className={styles.container}>
       {inView && (
         <div className={styles.bannercontainer}>
-          {DynamicComponent && <DynamicComponent/>}
+          {DynamicComponent && <DynamicComponent />}
         </div>
       )}
     </div>
