@@ -2,34 +2,43 @@ import React, { useState } from "react";
 import styles from "./Management.module.css";
 import { uploadImage } from "../API/uploader";
 import { addNewProduct } from "../API/firebase";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export default function Management() {
-  const [product, setProduct] = useState({})
-  const [file, setFile]  = useState();
-  const [success, setSuccess] = useState('');
+  const [product, setProduct] = useState({});
+  const [file, setFile] = useState();
+  const [success, setSuccess] = useState("");
   const [uploading, setUploading] = useState(false);
+  const queryClient = useQueryClient();
+  const addProduct = useMutation({mutationFn:({product, url}) => addNewProduct(product, url),
+    onSuccess: () => queryClient.invalidateQueries(['products'])
+});
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUploading(true)
-    uploadImage(file).then(url => {
-      addNewProduct(product, url)
-      setSuccess('✅ 상품이 등록되었습니다.')
-      setTimeout(() => {
-      setSuccess(null)
-      setProduct({})
-      setFile(null)
-    }, 3000)
-    })
-    .finally(() => setUploading(false))
-  }
+    setUploading(true);
+    uploadImage(file)
+      .then((url) => {
+        addProduct.mutate({product, url}, {
+          onSuccess: () => {
+            setSuccess("✅ 상품이 등록되었습니다.");
+        setTimeout(() => {
+          setSuccess(null);
+          setProduct({});
+          setFile(null);
+        }, 3000);
+          }
+        })
+      })
+      .finally(() => setUploading(false));
+  };
   const handleChange = (e) => {
-    const {name, value, files} = e.target;
-    if(name === 'file') {
-      setFile(files && files[0])
+    const { name, value, files } = e.target;
+    if (name === "file") {
+      setFile(files && files[0]);
       return;
     }
-    setProduct((product) => ({...product, [name]: value}) )
-  }
+    setProduct((product) => ({ ...product, [name]: value }));
+  };
   return (
     <div className={styles.container}>
       <h6>새 상품 등록</h6>
@@ -66,10 +75,9 @@ export default function Management() {
         />
         <input
           type="number"
-          placeholder="할인가격"
+          placeholder="할인가격(할인 시에만 입력)"
           name="saleprice"
           value={product.saleprice ?? ""}
-          required
           onChange={handleChange}
         />
         <input

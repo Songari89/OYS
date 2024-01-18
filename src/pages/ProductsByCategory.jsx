@@ -26,7 +26,7 @@ export default function ProductsByCategory() {
   return (
     <section className="section">
       <p className="sectiontitle">{category? categories[category] : "전체" }</p>
-      <div className={styles.contentcontainer}>
+      <div className="container">
         {isLoading && <Loading />}
         {error && <NotFound />}
 

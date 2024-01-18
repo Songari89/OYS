@@ -5,18 +5,20 @@ import Login from "./Login";
 import Menuicon from "./Menuicon";
 import AuthPopup from "../AuthPopup";
 import SubMenu from "./SubMenu";
+import Products from "./Products";
 
 export default function Header() {
-  const [showSubMenu, setShowSubMenu] = useState(false);
+  const [showSubMenu, setShowSubMenu] = useState();
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
-  const handleMenu = () => {
-    if (!pathname.includes("/products")) {
-      return navigate("/products");
-    }
-    setShowSubMenu((pre) => !pre);
-  };
+  // const handleMenu = () => {
+  //   setShowSubMenu((pre) => !pre);
+  //   if (showSubMenu && !pathname.includes("/products")) {
+  //     navigate("/products");
+  //   }
+    
+  // };
 
   return (
     <>
@@ -30,9 +32,10 @@ export default function Header() {
           <Login />
         </div>
         <nav className={styles.menu}>
-          <p className={styles.products} onClick={handleMenu}>
+          {/* <p className={styles.products} onClick={handleMenu}>
             PRODUCTS
-          </p>
+          </p> */}
+          <Products />
           <Link to="/aboutus" state={{ path: "aboutus" }}>
             <p>ABOUT US</p>
           </Link>
@@ -43,7 +46,8 @@ export default function Header() {
             <p>MYPAGE</p>
           </Link>
         </nav>
-        {showSubMenu && <SubMenu path={"/products"} />}
+        {showSubMenu && 
+        <SubMenu path={"/products"} />}
       </header>
     </>
   );

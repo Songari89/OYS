@@ -6,5 +6,5 @@ import Loading from "./Loading";
 export default function Mypage() {
   const { logout } = useUserContext();
 
-  return <></>;
+  return <><button onClick={logout}>logout</button></>;
 }

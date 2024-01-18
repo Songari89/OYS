@@ -9,7 +9,7 @@ import {
   setPersistence,
   browserSessionPersistence,
 } from "firebase/auth";
-import { getDatabase, get, set, ref } from "firebase/database";
+import { getDatabase, get, set, ref, remove } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -114,4 +114,19 @@ export async function getProduct(category) {
     }
     return [];
   });
+}
+
+export async function addOrUpdateToCart(uid, product){
+  return set(ref(database, `carts/${uid}/${product.id}`), product)
+}
+
+export async function getCart(uid){
+  return get(ref(database, `carts/${uid}`)).then((snapshot) => {
+    const items = snapshot.val() || {};
+    return Object.values(items)
+  })
+}
+
+export async function removeFromCart(uid, productId){
+  return remove(ref(database, `carts/${uid}/${productId}`))
 }

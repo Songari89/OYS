@@ -24,7 +24,7 @@ export default function ProductCard({ product }) {
           </span>
           <p className={styles.color}>{colors.length} colors</p>
         </div>
-        <Heart />
+        <Heart product={product}/>
       </div>
     </li>
   );

@@ -114,11 +114,12 @@ code {
   color: #ffffff;
   border: none;
   font-weight: 600;
+  cursor: pointer;
 }
 
 /* section 공통 스타일 */
 .section{
-    width: 90vw;
+  width: 90vw;
   margin: 0 auto;
   text-align:center;
   padding: 1rem 0 8rem 0;
@@ -130,9 +131,19 @@ code {
   font-weight: 600;
 }
 
+.container {
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 2px solid var(--brandColor);
+  padding: 2.5rem 2rem;
+}
+
 @media(max-width:450px){
   .section{
     width: 100%;
-    padding: 1rem 0 5rem 0;
+    padding: 1rem 0 4rem 0;
+  }
+  .container{
+    padding: 2.5rem 1rem
   }
 }

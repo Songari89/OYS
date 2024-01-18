@@ -1,0 +1,43 @@
+.container{
+  /* text-align: right; */
+
+}
+
+.products {
+  margin: 0 0.5rem;
+  cursor:pointer;
+} 
+
+.submenu {
+  width: 90vw;
+  position: absolute;
+  left:0;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+.submenu > a {
+  margin: 0 0.5rem;
+  color: var(--fontColor);
+}
+
+.submenu > a:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px var(--brandColor);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.submenu > a:hover:after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 450px) {
+  .submenu {
+    width: 100vw;
+  }
+}
+
