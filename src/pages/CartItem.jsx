@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./CartItem.module.css";
 import useCart from "../hooks/useCart";
 
-export default function CartItem({ item, uid }) {
+export default function CartItem({ item}) {
   const { addOrUpdateItem, removeItem} = useCart();
   const { id, image, title, price, color, quantity } = item;
   const handleMinus = () => {

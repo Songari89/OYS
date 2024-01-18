@@ -1,25 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Header.module.css";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Login from "./Login";
 import Menuicon from "./Menuicon";
 import AuthPopup from "../AuthPopup";
-import SubMenu from "./SubMenu";
+
 import Products from "./Products";
 
 export default function Header() {
-  const [showSubMenu, setShowSubMenu] = useState();
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
-
-  // const handleMenu = () => {
-  //   setShowSubMenu((pre) => !pre);
-  //   if (showSubMenu && !pathname.includes("/products")) {
-  //     navigate("/products");
-  //   }
-    
-  // };
-
   return (
     <>
       <AuthPopup />
@@ -32,9 +20,6 @@ export default function Header() {
           <Login />
         </div>
         <nav className={styles.menu}>
-          {/* <p className={styles.products} onClick={handleMenu}>
-            PRODUCTS
-          </p> */}
           <Products />
           <Link to="/aboutus" state={{ path: "aboutus" }}>
             <p>ABOUT US</p>
@@ -42,12 +27,11 @@ export default function Header() {
           <Link to="/cart" state={{ path: "cart" }}>
             <p>CART</p>
           </Link>
+
           <Link to="/mypage">
             <p>MYPAGE</p>
           </Link>
         </nav>
-        {showSubMenu && 
-        <SubMenu path={"/products"} />}
       </header>
     </>
   );

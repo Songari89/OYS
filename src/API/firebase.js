@@ -80,11 +80,16 @@ async function adminUser(user) {
 export async function addNewProduct(product, imageUrl) {
   const id = uuid();
   const category = product.category;
+  const saleprice =
+    product.saleprice !== undefined && !isNaN(product.saleprice)
+      ? parseInt(product.saleprice).toLocaleString("ko-KR")
+      : null;
+  console.log(saleprice);
   set(ref(database, `products/${category}/${id}`), {
     ...product,
     id,
     price: parseInt(product.price).toLocaleString("ko-KR"),
-    saleprice: parseInt(product.saleprice).toLocaleString("ko-KR"),
+    saleprice: saleprice,
     image: imageUrl,
     colors: product.colors.split(","),
   });
@@ -103,7 +108,6 @@ export async function getProduct(category) {
   const databaseRef = category ? `products/${category}` : "products";
   return get(ref(database, databaseRef)).then((snapshot) => {
     if (snapshot.exists()) {
-
       if (category) {
         return Object.values(snapshot.val());
       } else {
@@ -116,17 +120,17 @@ export async function getProduct(category) {
   });
 }
 
-export async function addOrUpdateToCart(uid, product){
-  return set(ref(database, `carts/${uid}/${product.id}`), product)
+export async function addOrUpdateToCart(uid, product) {
+  return set(ref(database, `carts/${uid}/${product.id}`), product);
 }
 
-export async function getCart(uid){
+export async function getCart(uid) {
   return get(ref(database, `carts/${uid}`)).then((snapshot) => {
     const items = snapshot.val() || {};
-    return Object.values(items)
-  })
+    return Object.values(items);
+  });
 }
 
-export async function removeFromCart(uid, productId){
-  return remove(ref(database, `carts/${uid}/${productId}`))
+export async function removeFromCart(uid, productId) {
+  return remove(ref(database, `carts/${uid}/${productId}`));
 }

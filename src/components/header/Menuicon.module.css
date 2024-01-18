@@ -30,6 +30,33 @@
   right: 99.64px;
 }
 
+.itemincart{
+
+}
+
+.itemincart>img{
+  width:21px;
+  height:21px;
+  position: absolute;
+  right: 99.64px;
+  bottom: 0;
+}
+
+.itemincart>p{
+  width: 16px;
+  height:16px;
+  position:absolute;
+  right: 88px;
+  bottom: 8px;
+  background-color:var(--subBrandColor);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.1;
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
 @media(max-width:450px){
   .icons{
     display:none;

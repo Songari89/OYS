@@ -4,9 +4,11 @@ import { useLocation } from "react-router-dom";
 import useUserContext from "../context/UserProvider";
 import { addOrUpdateToCart } from "../API/firebase";
 import Heart from "../components/Heart";
+import useCart from "../hooks/useCart";
 
 export default function ProductDetail() {
   const { uid, login } = useUserContext();
+  const { addOrUpdateItem } = useCart();
   const {
     state: { product },
   } = useLocation();
@@ -27,7 +29,7 @@ export default function ProductDetail() {
       color: selected,
       quantity: 1,
     };
-    addOrUpdateToCart(uid, product);
+    addOrUpdateItem.mutate(product);
     setSuccess("✅ 상품이 장바니구에 담겼습니다.");
     setTimeout(() => {
       setSuccess(null);
