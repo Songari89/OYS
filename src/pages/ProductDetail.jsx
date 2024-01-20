@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import styles from "./ProductDetail.module.css";
 import { useLocation } from "react-router-dom";
 import useUserContext from "../context/UserProvider";
-import { addOrUpdateToCart } from "../API/firebase";
 import Heart from "../components/Heart";
 import useCart from "../hooks/useCart";
 
 export default function ProductDetail() {
-  const { uid, login } = useUserContext();
-  const { addOrUpdateItem } = useCart();
-  const {
-    state: { product },
-  } = useLocation();
-  const { id, title, image, saleprice, price, description, colors } = product;
   const [selected, setSelected] = useState();
   const [success, setSuccess] = useState("");
+  const { uid, login } = useUserContext();
+  const { addOrUpdateItem } = useCart();
+  const location = useLocation();
+  const product = location.state?.product;
+
+  const { id, title, image, saleprice, price, description, colors } = product;
+
   const handleChange = (e) => setSelected(e.target.value);
   const handleClick = (e) => {
     if (!selected) {
@@ -39,13 +39,14 @@ export default function ProductDetail() {
   return (
     <section className="section">
       <p className="sectiontitle">{title}</p>
-      <div className={`container ${styles.content}`}>
+      <div className={`container ${styles.contentscontainer}`}>
         <img className={styles.image} src={image} alt={title} />
 
         <div className={styles.contents}>
           <p className={styles.title}>
             {title} <Heart product={product} />
           </p>
+
           {saleprice && <span className={styles.sale}>₩{price}</span>}
           <span className={styles.price}>
             {saleprice ? `₩${saleprice}` : `₩${price}`}

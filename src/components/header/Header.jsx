@@ -14,7 +14,7 @@ export default function Header() {
       <header className={styles.container}>
         <div className={styles.logo}>
           <Link to="/">
-            <img className={styles.logoimage} src="/image/OYS.svg" />
+            <img className={styles.logoimage} src="/image/OYS.svg" alt="logo" />
           </Link>
           <Menuicon />
           <Login />

@@ -46,7 +46,7 @@ export default function Management() {
         <img
           className={styles.fileimage}
           src={URL.createObjectURL(file)}
-          alt="file image"
+          alt="file"
         />
       )}
       <form className={styles.form} onSubmit={handleSubmit}>

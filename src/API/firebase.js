@@ -134,3 +134,19 @@ export async function getCart(uid) {
 export async function removeFromCart(uid, productId) {
   return remove(ref(database, `carts/${uid}/${productId}`));
 }
+
+export async function addOrUpdateToLike(uid, product) {
+  return set(ref(database, `likes/${uid}/${product.id}`), product);
+}
+
+export async function getLike(uid) {
+  return get(ref(database, `likes/${uid}`)).then((snapshot) => {
+    const items = snapshot.val() || {};
+    return Object.values(items);
+  });
+}
+
+export async function removeFromLike(uid, productId) {
+  return remove(ref(database, `likes/${uid}/${productId}`));
+}
+

@@ -6,6 +6,7 @@ import { getProduct } from "../API/firebase";
 import Loading from "./Loading";
 import NotFound from "./NotFound";
 import ProductCard from "./ProductCard";
+import Heart from "../components/Heart";
 
 const categories = {
   crossbag: "크로스백",
@@ -25,7 +26,7 @@ export default function ProductsByCategory() {
   });
   return (
     <section className="section">
-      <p className="sectiontitle">{category? categories[category] : "전체" }</p>
+      <p className="sectiontitle">{category ? categories[category] : "전체"}</p>
       <div className="container">
         {isLoading && <Loading />}
         {error && <NotFound />}
@@ -33,7 +34,12 @@ export default function ProductsByCategory() {
         <ul className={styles.lists}>
           {products &&
             products.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <li className={styles.list} key={product.id}>
+                <ProductCard product={product} />
+                <div className={styles.heartcontainer}>
+                  <Heart product={product} />
+                </div>
+              </li>
             ))}
         </ul>
       </div>

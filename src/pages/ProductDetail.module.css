@@ -1,4 +1,4 @@
-.content {
+.contentscontainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +84,7 @@ span {
 }
 
 @media (max-width: 768px) {
-  .container {
+  .contentscontainer {
     flex-direction: column;
   }
   .image {
@@ -98,7 +98,7 @@ span {
 }
 
 @media (max-width: 450px) {
-  .container {
+  .contentscontainer{
     padding: 1rem;
   }
   .image {

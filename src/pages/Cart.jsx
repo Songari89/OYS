@@ -2,22 +2,18 @@ import React from "react";
 import styles from "./Cart.module.css";
 import Loading from "./Loading";
 import NotFound from "./NotFound";
-import { useQuery } from "@tanstack/react-query";
-import { getCart } from "../API/firebase";
 import useUserContext from "../context/UserProvider";
 import CartItem from "./CartItem";
 import PriceCard from "./PriceCard";
+import useCart from "../hooks/useCart";
 
 export default function Cart() {
   const { uid } = useUserContext();
-  const {
+  const {cartQuery:{
     isLoading,
     error,
     data: items,
-  } = useQuery({
-    queryKey: [],
-    queryFn: () => getCart(uid),
-  });
+  }} = useCart(); 
   const hasItems = items && items.length > 0;
   const totalPrice =
     items &&

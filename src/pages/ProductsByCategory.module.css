@@ -12,3 +12,21 @@
   place-items: center;
   gap: 1.5rem;
 }
+
+.list {
+transition : transform 0.1s ease-in-out;
+position: relative;
+}
+ 
+.list:hover{
+  transform: scale(1.03);
+}
+.heartcontainer{
+  
+  position: absolute;
+  bottom: 27px;
+  right: 20px;
+  width: 20px;
+  height:20px;
+  cursor:pointer;
+}
